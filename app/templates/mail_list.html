@@ -1,0 +1,21 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+	<meta charset="UTF-8">  
+	<title>Список писем.</title>  
+</head>  
+<body>  
+    <table border="1">
+        {% for mail in object_list %}
+        <tr>
+            <td>{{forloop.counter}}</td>            
+            <td>{{ mail.address }}</td>
+            <td>{{ mail.subject }}</td>
+            <td>{{ mail.content }}</td>
+            <td>{{ mail.send_time }}</td>
+            <td>{{ mail.sent }}</td>            
+        </tr>
+        {% endfor %}
+    </table>
+</body>  
+</html>
